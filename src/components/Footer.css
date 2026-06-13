@@ -1,0 +1,31 @@
+.footerBar{
+
+  padding:40px 8%;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  border-top:
+  1px solid rgba(255,255,255,.08);
+
+  background:#050505;
+
+  color:#7c8798;
+
+  font-size:.95rem;
+}
+
+.footerBar span{
+  color:#00ffb3;
+}
+
+@media(max-width:768px){
+
+  .footerBar{
+    flex-direction:column;
+    gap:12px;
+    text-align:center;
+  }
+
+}

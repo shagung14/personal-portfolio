@@ -1,0 +1,616 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"Inter",sans-serif;
+  background:#050505;
+  color:white;
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+#root{
+  min-height:100vh;
+}
+
+::selection{
+  background:#00ffb4;
+  color:black;
+}
+
+::-webkit-scrollbar{
+  width:10px;
+}
+
+::-webkit-scrollbar-track{
+  background:#050505;
+}
+
+::-webkit-scrollbar-thumb{
+  background:rgba(255,255,255,.15);
+  border-radius:999px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background:#00ffb4;
+}
+.container{
+  min-height:100vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  padding:140px 20px 80px;
+}
+
+.content{
+  width:100%;
+  max-width:1000px;
+}
+
+h1{
+  font-size:clamp(2.8rem,6vw,5rem);
+  font-weight:900;
+  letter-spacing:-3px;
+  margin-bottom:20px;
+}
+
+h2{
+  font-size:clamp(2rem,4vw,3rem);
+  margin-bottom:20px;
+}
+
+p{
+  color:#b4b4b4;
+  line-height:1.8;
+}
+.counter-card,
+.checker-card,
+.form-card,
+.calculator-card,
+.tracker-card,
+.weather-card,
+.notfound-card,
+.note-card{
+
+  width:100%;
+  max-width:700px;
+
+  padding:40px;
+
+  border-radius:30px;
+
+  background:
+  rgba(255,255,255,.04);
+
+  border:
+  1px solid rgba(255,255,255,.08);
+
+  backdrop-filter:
+  blur(25px);
+
+  box-shadow:
+  0 20px 60px rgba(0,0,0,.35);
+
+  transition:.35s;
+}
+
+.counter-card:hover,
+.checker-card:hover,
+.form-card:hover,
+.calculator-card:hover,
+.tracker-card:hover,
+.weather-card:hover,
+.note-card:hover{
+
+  transform:
+  translateY(-8px);
+
+  border-color:
+  rgba(0,255,180,.25);
+
+  box-shadow:
+  0 25px 60px rgba(0,255,180,.08);
+}
+input,
+textarea,
+select{
+
+  width:100%;
+
+  padding:16px;
+
+  margin-top:12px;
+
+  border-radius:18px;
+
+  background:
+  rgba(255,255,255,.04);
+
+  border:
+  1px solid rgba(255,255,255,.08);
+
+  color:white;
+
+  outline:none;
+
+  transition:.3s;
+}
+
+input:focus,
+textarea:focus{
+
+  border-color:#00ffb4;
+
+  box-shadow:
+  0 0 20px rgba(0,255,180,.15);
+}
+
+input::placeholder,
+textarea::placeholder{
+  color:#888;
+}
+button,
+.btn{
+
+  padding:16px 30px;
+
+  border:none;
+
+  border-radius:999px;
+
+  background:#00ffb4;
+
+  color:black;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+button:hover,
+.btn:hover{
+
+  transform:
+  translateY(-5px);
+
+  box-shadow:
+  0 0 40px rgba(0,255,180,.4);
+}
+.back-btn{
+  display:inline-block;
+  margin-top:25px;
+
+  padding:12px 20px;
+
+  background:#14b8a6;
+  color:white;
+
+  text-decoration:none;
+
+  border-radius:10px;
+
+  transition:0.3s;
+}
+
+.back-btn:hover{
+  transform:translateY(-3px);
+  opacity:0.9;
+}
+.calc-buttons{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(4,1fr);
+
+  gap:12px;
+
+  margin-top:20px;
+}
+
+.calc-buttons button{
+  padding:18px;
+}
+
+.equal{
+  grid-column:span 2;
+}
+
+.clear{
+  grid-column:span 2;
+}
+.notes-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(300px,1fr));
+
+  gap:25px;
+
+  margin-top:30px;
+}
+
+.note-card h3{
+  margin-bottom:12px;
+}
+.task-list{
+  list-style:none;
+  margin-top:20px;
+}
+
+.task-list li{
+
+  padding:16px;
+
+  margin-bottom:12px;
+
+  border-radius:16px;
+
+  background:
+  rgba(255,255,255,.04);
+
+  border:
+  1px solid rgba(255,255,255,.06);
+
+  transition:.3s;
+}
+
+.task-list li:hover{
+
+  transform:
+  translateX(5px);
+
+  border-color:
+  rgba(0,255,180,.25);
+}
+.weather-info{
+  margin-top:20px;
+}
+
+.map-container{
+
+  overflow:hidden;
+
+  border-radius:24px;
+
+  border:
+  1px solid rgba(255,255,255,.08);
+}
+
+.map-container iframe{
+  width:100%;
+  height:450px;
+  border:none;
+}.footer{
+
+  margin-top:80px;
+
+  padding:40px 8%;
+
+  border-top:
+  1px solid rgba(255,255,255,.08);
+
+  background:#050505;
+}
+
+.footer-container{
+
+  max-width:1400px;
+
+  margin:auto;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.footer a{
+  color:#b4b4b4;
+}
+
+.footer a:hover{
+  color:#00ffb4;
+}
+@media(max-width:768px){
+
+  .container{
+    padding-top:180px;
+  }
+
+  .counter-card,
+  .checker-card,
+  .form-card,
+  .calculator-card,
+  .tracker-card,
+  .weather-card{
+    padding:30px 20px;
+  }
+
+  .footer-container{
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+  }
+
+  .calc-buttons{
+    gap:8px;
+  }
+}
+/* =========================
+   MODERN TASK TRACKER
+========================= */
+
+.task-list{
+  list-style:none;
+  padding:0;
+  margin-top:25px;
+}
+
+.task-list li{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:14px 18px;
+  margin-bottom:12px;
+
+  border-radius:14px;
+
+  background:rgba(255,255,255,.12);
+
+  backdrop-filter:blur(15px);
+
+  transition:.3s;
+}
+
+.task-list li:hover{
+  transform:translateY(-3px);
+  background:rgba(255,255,255,.18);
+}
+
+.task-list li span{
+  cursor:pointer;
+  font-size:16px;
+}
+
+.task-list li.done span{
+  text-decoration:line-through;
+  opacity:.6;
+}
+
+.task-list li button{
+  border:none;
+  background:none;
+  cursor:pointer;
+  font-size:18px;
+}
+
+.task-list li button:hover{
+  transform:scale(1.2);
+}
+/* =========================
+   MODERN COUNTER PAGE
+========================= */
+
+.counter-display{
+  font-size:80px;
+  font-weight:700;
+
+  margin:25px 0;
+
+  color:#14b8a6;
+
+  text-align:center;
+}
+
+.counter-status{
+  margin-top:20px;
+  font-size:18px;
+  text-align:center;
+}
+
+.counter-status p{
+  margin:0;
+}
+
+.btn-group{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  justify-content:center;
+
+  margin-top:20px;
+}
+
+.inc{
+  background:#14b8a6;
+}
+
+.dec{
+  background:#ef4444;
+}
+
+.reset{
+  background:#f59e0b;
+  color:white;
+}
+
+.inc:hover,
+.dec:hover,
+.reset:hover{
+  transform:translateY(-3px);
+}
+/* ==========================
+   NEW COUNTER DESIGN
+========================== */
+
+.counterPage{
+  min-height:100vh;
+
+  padding-top:140px;
+  padding-bottom:40px;
+
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+}
+
+.modernCounterCard{
+  width:550px;
+  max-width:90%;
+
+  padding:50px;
+
+  text-align:center;
+
+  border-radius:30px;
+
+  backdrop-filter:blur(25px);
+
+  background:rgba(255,255,255,.08);
+
+  border:1px solid rgba(255,255,255,.12);
+
+  box-shadow:
+  0 20px 60px rgba(0,0,0,.25);
+}
+
+.modernCounterCard h1{
+  margin-bottom:10px;
+}
+
+.modernCounterCard p{
+  color:#d1d5db;
+}
+
+.modernCounterNumber{
+  font-size:90px;
+  font-weight:800;
+
+  color:#14b8a6;
+
+  margin:35px 0;
+}
+
+.modernCounterButtons{
+  display:flex;
+  gap:15px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.modernBtn{
+  border:none;
+
+  padding:14px 24px;
+
+  border-radius:14px;
+
+  color:white;
+
+  cursor:pointer;
+
+  font-weight:600;
+
+  transition:.3s;
+}
+
+.modernBtn:hover{
+  transform:translateY(-4px);
+}
+
+.plus{
+  background:#14b8a6;
+}
+
+.minus{
+  background:#ef4444;
+}
+
+.resetBtn{
+  background:#f59e0b;
+}
+.theme-preview{
+  transition:.3s;
+}
+
+.theme-preview:hover{
+  transform:translateY(-5px);
+}
+/* =========================
+   TIC TAC TOE
+========================= */
+
+.ticBoard{
+  margin:30px auto;
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(3,100px);
+
+  gap:12px;
+
+  justify-content:center;
+}
+
+.ticCell{
+  width:100px;
+  height:100px;
+
+  font-size:40px;
+  font-weight:700;
+
+  border:none;
+
+  border-radius:20px;
+
+  cursor:pointer;
+
+  background:
+  rgba(255,255,255,.08);
+
+  backdrop-filter:blur(20px);
+
+  color:white;
+
+  transition:.3s;
+}
+
+.ticCell:hover{
+  transform:scale(1.05);
+  border:1px solid #14b8a6;
+}
+
+@media(max-width:600px){
+
+.ticBoard{
+  grid-template-columns:
+  repeat(3,80px);
+}
+
+.ticCell{
+  width:80px;
+  height:80px;
+  font-size:32px;
+}
+
+}

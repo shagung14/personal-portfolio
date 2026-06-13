@@ -1,0 +1,372 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:"Inter",sans-serif;
+}
+
+/* ==================================
+   CONTAINER
+================================== */
+
+.resume-container{
+  min-height:100vh;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+  padding:140px 20px 80px;
+
+  background:#050505;
+}
+
+/* ==================================
+   DOWNLOAD BUTTON
+================================== */
+
+.download-btn{
+  margin-bottom:30px;
+
+  padding:16px 30px;
+
+  border:none;
+  border-radius:999px;
+
+  background:#00ffb4;
+  color:black;
+
+  font-weight:700;
+  font-size:15px;
+
+  cursor:pointer;
+
+  transition:.35s;
+
+  box-shadow:
+  0 0 30px rgba(0,255,180,.25);
+}
+
+.download-btn:hover{
+  transform:
+  translateY(-4px)
+  scale(1.03);
+
+  box-shadow:
+  0 0 40px rgba(0,255,180,.45);
+}
+
+/* ==================================
+   MAIN RESUME CARD
+================================== */
+
+.resume-card{
+  width:950px;
+  max-width:95%;
+
+  padding:50px;
+
+  border-radius:30px;
+
+  backdrop-filter:blur(25px);
+
+  background:
+  rgba(255,255,255,.04);
+
+  border:
+  1px solid rgba(255,255,255,.08);
+
+  box-shadow:
+  0 25px 80px rgba(0,0,0,.45);
+
+  color:white;
+
+  position:relative;
+  overflow:hidden;
+}
+
+.resume-card::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(0,255,180,.04),
+    transparent,
+    rgba(0,255,180,.03)
+  );
+
+  pointer-events:none;
+}
+
+/* ==================================
+   HEADER
+================================== */
+
+.resume-header{
+  display:flex;
+  align-items:center;
+  gap:30px;
+
+  padding-bottom:25px;
+  margin-bottom:35px;
+
+  border-bottom:
+  1px solid rgba(255,255,255,.08);
+}
+
+.resume-img{
+  width:130px;
+  height:130px;
+
+  object-fit:cover;
+
+  border-radius:50%;
+
+  border:3px solid #00ffb4;
+
+  box-shadow:
+  0 0 35px rgba(0,255,180,.4);
+
+  transition:.4s;
+}
+
+.resume-img:hover{
+  transform:scale(1.05);
+}
+
+.resume-header h1{
+  font-size:3rem;
+  font-weight:800;
+
+  margin-bottom:10px;
+
+  background:
+  linear-gradient(
+    90deg,
+    white,
+    #00ffb4
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.resume-header p{
+  color:#bdbdbd;
+  line-height:1.8;
+}
+
+/* ==================================
+   SECTIONS
+================================== */
+
+section{
+  margin-bottom:35px;
+}
+
+section h2{
+  color:#00ffb4;
+
+  font-size:1.4rem;
+  font-weight:700;
+
+  margin-bottom:15px;
+
+  letter-spacing:1px;
+}
+
+section p,
+section li{
+  color:#c5c5c5;
+  line-height:1.8;
+}
+
+ul{
+  padding-left:20px;
+}
+
+li{
+  margin-bottom:10px;
+}
+
+/* ==================================
+   TABLES
+================================== */
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  overflow:hidden;
+
+  border-radius:15px;
+
+  margin-top:15px;
+}
+
+thead{
+  background:
+  rgba(0,255,180,.12);
+}
+
+th{
+  color:#00ffb4;
+
+  padding:16px;
+
+  text-align:left;
+
+  font-weight:700;
+
+  border:
+  1px solid rgba(255,255,255,.08);
+}
+
+td{
+  padding:16px;
+
+  color:#d0d0d0;
+
+  border:
+  1px solid rgba(255,255,255,.08);
+}
+
+tbody tr{
+  transition:.3s;
+}
+
+tbody tr:hover{
+  background:
+  rgba(0,255,180,.05);
+}
+
+/* ==================================
+   SECTION CARD EFFECT
+================================== */
+
+section{
+  padding:20px;
+
+  border-radius:20px;
+
+  background:
+  rgba(255,255,255,.025);
+
+  border:
+  1px solid rgba(255,255,255,.05);
+
+  transition:.35s;
+}
+
+section:hover{
+  transform:translateY(-4px);
+
+  border-color:
+  rgba(0,255,180,.2);
+
+  box-shadow:
+  0 10px 30px rgba(0,255,180,.08);
+}
+
+/* ==================================
+   SCROLLBAR
+================================== */
+
+::-webkit-scrollbar{
+  width:10px;
+}
+
+::-webkit-scrollbar-track{
+  background:#050505;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#00ffb4;
+  border-radius:999px;
+}
+
+/* ==================================
+   TEXT SELECTION
+================================== */
+
+::selection{
+  background:#00ffb4;
+  color:black;
+}
+
+/* ==================================
+   PRINT MODE
+================================== */
+
+@media print{
+
+  .download-btn,
+  nav{
+    display:none;
+  }
+
+  .resume-container{
+    padding:0;
+    background:white;
+  }
+
+  .resume-card{
+    width:100%;
+    max-width:100%;
+
+    background:white;
+    color:black;
+
+    box-shadow:none;
+    border:none;
+  }
+
+  .resume-header h1{
+    color:black;
+    -webkit-text-fill-color:black;
+  }
+
+  section h2{
+    color:black;
+  }
+
+  p,
+  td,
+  li{
+    color:black;
+  }
+}
+
+/* ==================================
+   MOBILE
+================================== */
+
+@media(max-width:768px){
+
+  .resume-card{
+    padding:30px;
+  }
+
+  .resume-header{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .resume-header h1{
+    font-size:2.2rem;
+  }
+
+  th,
+  td{
+    padding:10px;
+    font-size:.9rem;
+  }
+}

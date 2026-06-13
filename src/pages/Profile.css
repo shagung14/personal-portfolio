@@ -1,0 +1,111 @@
+/* MAIN CONTAINER */
+.profile-container {
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+/* LINKEDIN BANNER */
+.profile-banner {
+  height: 220px;
+  background: linear-gradient(135deg, #0f766e, #115e59);
+  border-radius: 20px 20px 0 0;
+}
+
+/* CARD */
+.profile-card {
+  position: relative;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  padding: 90px 35px 35px;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* PROFILE IMAGE */
+.profile-image-box {
+  position: absolute;
+  top: -75px;
+  left: 35px;
+}
+
+.profile-image-box img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 5px solid white;
+  background: white;
+}
+
+/* CONTENT */
+.profile-content {
+  margin-top: 10px;
+}
+
+.profile-content h1 {
+  margin-bottom: 5px;
+  font-size: 35px;
+}
+
+.title {
+  color: #0f766e;
+  margin-bottom: 10px;
+}
+
+.location {
+  margin-bottom: 20px;
+  color: gray;
+}
+
+/* INFO */
+.profile-info {
+  margin-bottom: 25px;
+}
+
+.profile-info p {
+  margin: 8px 0;
+}
+
+/* SECTION */
+.profile-section {
+  margin-top: 25px;
+}
+
+.profile-section h2 {
+  margin-bottom: 10px;
+  color: #0f766e;
+}
+
+/* SKILLS */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills span {
+  background: #0f766e;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/* BUTTONS */
+.profile-actions {
+  margin-top: 25px;
+}
+
+.profile-actions button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #0f766e;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.profile-actions button:hover {
+  opacity: 0.9;
+}

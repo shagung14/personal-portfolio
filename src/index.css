@@ -1,0 +1,148 @@
+/* ================= ROOT THEME ================= */
+:root {
+  --text: #6b6375;
+  --text-h: #1c1a22;
+  --bg: #f5e6d3;
+  --border: #e5e4e7;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+
+  --shadow: 0 10px 25px rgba(0,0,0,0.1);
+  --radius: 16px;
+
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #f5e6d3, #e8d5c4);
+}
+
+/* ================= LAYOUT ================= */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+  width: 230px;
+  height: 100vh;
+  padding: 25px;
+
+  background: rgba(20, 20, 30, 0.85);
+  backdrop-filter: blur(20px);
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  box-shadow: var(--shadow);
+}
+
+.sidebar h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* LINKS */
+.sidebar a {
+  text-decoration: none;
+  color: #bbb;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  transform: translateX(5px);
+}
+
+/* ================= MAIN ================= */
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+/* ================= CARD ================= */
+.card {
+  width: 380px;
+  padding: 30px;
+  border-radius: var(--radius);
+
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(20px);
+
+  box-shadow: var(--shadow);
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  transition: 0.3s;
+}
+
+/* CARD HOVER */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ================= INPUT ================= */
+input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  outline: none;
+}
+
+/* ================= BUTTON ================= */
+button {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+
+  background: linear-gradient(135deg, #7b2ff7, #f107a3);
+  color: white;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* ================= TEXT ================= */
+h2 {
+  margin: 0;
+  color: var(--text-h);
+}
+
+p {
+  margin: 0;
+  color: var(--text);
+}
+
+/* ================= LINKS ================= */
+a {
+  display: block;
+  margin: 5px 0;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
